@@ -38,14 +38,14 @@ export default function ToolTip({
     );
 }
 
-const Container = styled.div`
+const Container = styled.div<{ display: string }>`
     display: ${props => props?.styling?.display ? props?.styling.display : 'flex'};
     position: relative;
 `;
 
-const ToolTipBox = styled.div`
+const ToolTipBox = styled.div<{ yOffset: string }>`
     position: absolute;
-    top: calc(100% + ${props => props?.styling?.display ? props.styling.display : '10px'});
+    top: calc(100% + ${props => props?.styling?.yOffset ? props.styling.yOffset : '10px'});
 `;
 
 /* @ToolTip
